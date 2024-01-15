@@ -1,5 +1,7 @@
 import ThemeClient from "@/components/ThemeClient";
+import { GlobalStyle } from "@/styles/global";
 import type { Metadata } from "next";
+import StyledComponentsRegistry from "./registry";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,9 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ThemeClient>
-        <body>{children}</body>
-      </ThemeClient>
+      <StyledComponentsRegistry>
+        <ThemeClient>
+          <GlobalStyle />
+          <body>{children}</body>
+        </ThemeClient>
+      </StyledComponentsRegistry>
     </html>
   );
 }

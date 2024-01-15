@@ -1,7 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { LogoText } from "./styles";
 
-export default function Logo() {
-  return <LogoText>Help up</LogoText>;
+export function Logo() {
+  return (
+    <Link href="/">
+      <LogoText>Help up</LogoText>
+    </Link>
+  );
 }
