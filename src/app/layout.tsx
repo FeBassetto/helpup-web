@@ -15,12 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <StyledComponentsRegistry>
-        <ThemeClient>
-          <GlobalStyle />
-          <body>{children}</body>
-        </ThemeClient>
-      </StyledComponentsRegistry>
+      <ThemeClient>
+        <GlobalStyle />
+        <body>{children}</body>
+      </ThemeClient>
     </html>
   );
 }
