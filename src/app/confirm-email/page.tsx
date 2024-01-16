@@ -34,8 +34,8 @@ export default async function ConfirmEmail({
       ? "Sua conta foi confirmada com sucesso!"
       : "Erro ao tentar confirmar sua conta tente novamente!",
     alt: accountIsConfirmed
-      ? "Icone para confirmação de email"
-      : "Icone de erro",
+      ? "Icone para confirmação de email."
+      : "Icone de erro.",
   };
 
   if (!accountIsConfirmed) {
