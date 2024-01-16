@@ -10,6 +10,6 @@ export const fetchInstance = async (url: string, options?: RequestInit) => {
 
     return { data, status: response.status };
   } catch (error) {
-    return null;
+    return { error: true };
   }
 };

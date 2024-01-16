@@ -66,7 +66,7 @@ export default function ResetPassword({ searchParams }: ResetPasswordParams) {
     }
 
     return showErrorMessage(
-      response?.data.message || "Ocorreu um erro. Tente novamente mais tarde!"
+      response?.data?.message || "Ocorreu um erro. Tente novamente mais tarde!"
     );
   };
 
