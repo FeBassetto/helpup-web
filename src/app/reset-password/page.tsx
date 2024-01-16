@@ -62,7 +62,7 @@ export default function ResetPassword({ searchParams }: ResetPasswordParams) {
     });
 
     if (response === null) {
-      router.push("/password-success");
+      return router.push("/password-success");
     }
 
     return showErrorMessage(
