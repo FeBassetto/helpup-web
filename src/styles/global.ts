@@ -50,6 +50,10 @@ export const GlobalStyle = createGlobalStyle`
         box-shadow: none;
         border: none;
     }
+    input {
+        border: none;
+        outline: 0;
+    }
 
     body {
         padding: 20px;
@@ -62,5 +66,6 @@ export const GlobalStyle = createGlobalStyle`
         justify-content: center;
 
         box-sizing: border-box;
+        position: relative;
     }
 `;

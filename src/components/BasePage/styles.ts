@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
@@ -10,6 +12,8 @@ export const Container = styled.div`
   justify-content: center;
 
   gap: 20px;
+
+  max-width: 550px;
 `;
 
 export const Title = styled.h1`
@@ -20,7 +24,7 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.colors["purple-100"]};
 `;
 
-export const NotFoundIcon = styled(Image)`
+export const Icon = styled(Image)`
   width: 90vw;
   height: 90vw;
 

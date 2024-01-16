@@ -1,5 +1,15 @@
-import { NotFound } from "@/components/NotFound";
+import Icon from "@/assets/svg/404.svg";
 
-export default function NotFoundPage() {
-  return <NotFound />;
+import { BasePage } from "@/components/BasePage";
+
+export default function NotFound() {
+  return (
+    <BasePage
+      alt="Icone de página não encontrada"
+      buttonText="Página Inicial"
+      link="/"
+      src={Icon}
+      title="Ops... Não encontramos esta página"
+    />
+  );
 }
