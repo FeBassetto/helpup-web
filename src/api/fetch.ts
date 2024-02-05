@@ -4,12 +4,16 @@ const baseUrl =
     : process.env.NEXT_PUBLIC_API_PROD;
 
 export const fetchInstance = async (url: string, options?: RequestInit) => {
-  try {
-    const response = await fetch(`${baseUrl}${url}`, options);
-    const data = await response.json();
+  const response = await fetch(`${baseUrl}${url}`, options);
 
-    return { data, status: response.status };
-  } catch (error) {
-    return { error: true };
+  let data;
+  if (response.headers.get("Content-Type")?.includes("application/json")) {
+    try {
+      data = await response.json();
+    } catch (error) {
+      return { error: true };
+    }
   }
+
+  return data ? { data, status: response.status } : { status: response.status };
 };

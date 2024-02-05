@@ -27,7 +27,7 @@ export default async function ConfirmDelete({
     }),
   });
 
-  const isDeleted = deleteResponse === null;
+  const isDeleted = deleteResponse.status === 200;
 
   const informations = {
     title: isDeleted
