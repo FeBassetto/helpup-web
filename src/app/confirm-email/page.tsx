@@ -52,7 +52,7 @@ export default async function ConfirmEmail({
       }
     );
 
-    if (sendNewConfirmationResponse === null) {
+    if (sendNewConfirmationResponse.status === 201) {
       informations.title =
         "Não conseguimos confirmar sua conta. Enviamos outro link para seu email!";
     }
