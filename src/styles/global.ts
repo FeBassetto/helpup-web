@@ -59,7 +59,8 @@ export const GlobalStyle = createGlobalStyle`
         padding: 20px;
         
         width: 100%;
-        height: 100vh;
+        height: auto;
+        min-height: 100vh;
 
         display: flex;
         align-items: center;
